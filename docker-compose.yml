@@ -3,7 +3,7 @@ services:
     container_name: vless-to-http
     build: .
     ports:
-      - "9000:8080"   # HTTP proxy
+      - "9000:9000"   # HTTP proxy
       - "1080:1080"   # SOCKS5 proxy
 
     volumes:
