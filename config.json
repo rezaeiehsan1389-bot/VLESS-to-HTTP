@@ -1,0 +1,43 @@
+{
+  "log": {"loglevel": "warning"},
+  "inbounds": [
+    {
+      "listen": "0.0.0.0",
+      "port": 8080,
+      "protocol": "http",
+      "settings": {}
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "l31.hubnetwatchdssub.ir",
+            "port": 8880,
+            "users": [
+              {
+                "id": "04e45b62-96a6-4aab-ab31-e31b910547ee",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "sub1.netwatchp.com",
+          "allowInsecure": false
+        },
+        "xhttpSettings": {
+          "host": "myket.ir",
+          "path": "/assets",
+          "mode": "stream-up"
+        }
+      }
+    }
+  ]
+}
